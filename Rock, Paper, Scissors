@@ -1,0 +1,41 @@
+import random
+
+choices = ("rock", "paper", "scissors")
+
+print("Hello welcome to the game of Rock,Paper,and Scissors")
+
+Playerchoice = input("What is your choice? rock, paper, or scissors? ")
+
+if Playerchoice not in choices:
+    print("That is not a valid choice.")
+    Playerchoice = input("What is your choice? rock, paper, or scissors? ")
+else:
+    pass
+
+print(f"You have selected {Playerchoice}")
+Confirmchoice = input("Would you like to keep this selection?(y/n) ")
+
+if Confirmchoice == "n":
+    Playerchoice = "What would you like your choice to be? "
+elif Confirmchoice == "y":
+    pass
+else:
+    print("Sorry that is not a choice.")
+    Playerchoice = "What would you like your to be? "
+
+Computerchoice = random.choice(choices)
+
+print("Rock..Paper....Scissors!")
+print(f"Computer has chosen {Computerchoice}")
+
+if Playerchoice == Computerchoice:
+    print("Tie!")
+elif Playerchoice == "rock" and Computerchoice == "scissors":
+    print("Win!")
+elif Playerchoice == "paper" and Computerchoice == "rock":
+    print("Win!")
+elif Playerchoice == "scissors" and Computerchoice == "paper":
+    print("Win!")
+else:
+    print("Your loss!")
+##time function, win count function, and replay function.
